@@ -1,0 +1,40 @@
+{
+  "name": "cloudflare-cognito-jwt-verifier",
+  "version": "1.0.3-beta",
+  "description": "JWT verifier for AWS Cognito running on Cloudflare Workers",
+  "main": "dist/index.js",
+  "typings": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Frank Leng",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frankleng/cloudflare-cognito-jwt-verifier.git"
+  },
+  "homepage": "https://github.com/frankleng/cloudflare-cognito-jwt-verifier#readme",
+  "engines": {
+    "node": ">=16"
+  },
+  "dependencies": {
+    "jose": "^4.4.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^3.3.1",
+    "@types/jest": "^27.4.0",
+    "@types/node": "^15.14.9",
+    "@types/service-worker-mock": "^2.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.1",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.5"
+  }
+}
