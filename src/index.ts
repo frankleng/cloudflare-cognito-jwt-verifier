@@ -59,10 +59,11 @@ export async function getJwkByKid(iss: string, kid: string) {
       },
     },
   });
-  const { data } = (await result.json()) as {
-    data: { keys: (JWK & AWS_JWK)[] };
+  const { keys } = (await result.json()) as {
+     keys: (JWK & AWS_JWK)[]
   };
-  for (const key of data.keys) {
+  
+  for (const key of keys) {
     jwkCache[key.kid] = key;
   }
   return jwkCache[kid];
