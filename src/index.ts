@@ -62,7 +62,7 @@ export async function getJwkByKid(iss: string, kid: string) {
   const { keys } = (await result.json()) as {
      keys: (JWK & AWS_JWK)[]
   };
-  
+
   for (const key of keys) {
     jwkCache[key.kid] = key;
   }
@@ -117,6 +117,13 @@ export function getVerifier({
       }
     },
   };
+}
+
+export function isJwtError(e: Error) {
+  if (e instanceof JwksNoMatchingKeyError || e instanceof JwtVerificationError || e instanceof JwtInvalidError || e instanceof JwtCognitoClaimValidationError) {
+    return true
+  }
+  return false;
 }
 
 export {
