@@ -1,6 +1,6 @@
 # cloudflare-cognito-jwt-verifier
 A lightweight JWT verifier for AWS Cognito running on Cloudflare Workers.
-This lib fetches and caches JWKS from AWS Cognito, and verifies the JWT token.
+This lib fetches, caches JWKS from AWS Cognito, and verifies the JWT token.
 
 
 ## Why
